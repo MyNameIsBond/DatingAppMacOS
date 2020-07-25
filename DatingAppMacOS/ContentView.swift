@@ -8,11 +8,60 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct messageView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        GeometryReader { geometry in
+            HStack {
+                    Text("Dolores").frame(width: geometry.size.width, height: geometry.size.height)
+            }
+            }
     }
+}
+
+
+struct ContentView: View {
+    
+     @State var search: String = ""
+    
+     var body: some View {
+            GeometryReader { geometry in
+                
+            HStack {
+               NavigationView {
+                        VStack {
+                            HStack {
+                                TextField("Search", text: self.$search)
+                            }.padding()
+                            
+                            List {
+                            ForEach(1 ... 10, id: \.self) { index in
+                                    NavigationLink(destination: messageView()) {
+                                        VStack(alignment: .leading) {
+                                        HStack {
+                                            Image("pic")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                            .clipShape(Circle())
+                                            VStack {
+                                                Text("Link \(index)")
+                                                    .font(.caption)
+                                                    .bold()
+                                                Text("Link \(index)")
+                                                     .font(.caption)
+                                                Spacer()
+                                                    
+                                                }
+                                            }
+                                        }.padding(.vertical, 3)
+                                    }
+                                }
+                            }.listStyle(SidebarListStyle()).frame(minWidth: geometry.size.width / 4)
+                        }
+                    }
+                }
+            }
+       }
 }
 
 

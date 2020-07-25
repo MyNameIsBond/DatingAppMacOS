@@ -14,6 +14,7 @@
 		EA52B78E24BF9FAC00475BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA52B78C24BF9FAC00475BF9 /* Main.storyboard */; };
 		EA52B79A24BF9FAC00475BF9 /* DatingAppMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B79924BF9FAC00475BF9 /* DatingAppMacOSTests.swift */; };
 		EA52B7A524BF9FAC00475BF9 /* DatingAppMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7A424BF9FAC00475BF9 /* DatingAppMacOSUITests.swift */; };
+		EA86023924C6B6D600469F39 /* mockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86023824C6B6D600469F39 /* mockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EA52B7A024BF9FAC00475BF9 /* DatingAppMacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatingAppMacOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA52B7A424BF9FAC00475BF9 /* DatingAppMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingAppMacOSUITests.swift; sourceTree = "<group>"; };
 		EA52B7A624BF9FAC00475BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA86023824C6B6D600469F39 /* mockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				EA52B78324BF9FAB00475BF9 /* AppDelegate.swift */,
 				EA52B78524BF9FAB00475BF9 /* ContentView.swift */,
 				EA52B78724BF9FAC00475BF9 /* Assets.xcassets */,
+				EA86023824C6B6D600469F39 /* mockData.swift */,
 				EA52B78C24BF9FAC00475BF9 /* Main.storyboard */,
 				EA52B78F24BF9FAC00475BF9 /* Info.plist */,
 				EA52B79024BF9FAC00475BF9 /* DatingAppMacOS.entitlements */,
@@ -198,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Tony Hajdini";
 				TargetAttributes = {
 					EA52B77F24BF9FAB00475BF9 = {
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA86023924C6B6D600469F39 /* mockData.swift in Sources */,
 				EA52B78624BF9FAB00475BF9 /* ContentView.swift in Sources */,
 				EA52B78424BF9FAB00475BF9 /* AppDelegate.swift in Sources */,
 			);
@@ -432,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DatingAppMacOS/DatingAppMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DatingAppMacOS/Preview Content\"";
@@ -453,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DatingAppMacOS/DatingAppMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DatingAppMacOS/Preview Content\"";
