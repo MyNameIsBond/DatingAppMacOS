@@ -13,7 +13,10 @@ struct messageView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack {
-                    Text("Dolores").frame(width: geometry.size.width, height: geometry.size.height)
+                
+                    Text("Dolores")
+                    
+                    .frame(width: geometry.size.width, height: geometry.size.height)
             }
             }
     }
@@ -26,16 +29,17 @@ struct ContentView: View {
     
      var body: some View {
             GeometryReader { geometry in
-                
             HStack {
                NavigationView {
                         VStack {
                             HStack {
                                 TextField("Search", text: self.$search)
+                                    .background(Color.clear)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                             }.padding()
                             
                             List {
-                            ForEach(1 ... 10, id: \.self) { index in
+                            ForEach(1 ... 20, id: \.self) { index in
                                     NavigationLink(destination: messageView()) {
                                         VStack(alignment: .leading) {
                                         HStack {
