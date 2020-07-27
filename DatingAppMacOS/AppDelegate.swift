@@ -17,8 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
+        let contentView = ContentView().edgesIgnoringSafeArea(.top)
         // Create the window and set the content view. 
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
@@ -28,6 +27,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        window.titlebarAppearsTransparent = true
+        window.titleVisibility = .hidden
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
