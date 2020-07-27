@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA4A653224CEDEFC00D9D16E /* blurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A653124CEDEFC00D9D16E /* blurView.swift */; };
 		EA52B78424BF9FAB00475BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B78324BF9FAB00475BF9 /* AppDelegate.swift */; };
 		EA52B78624BF9FAB00475BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B78524BF9FAB00475BF9 /* ContentView.swift */; };
 		EA52B78824BF9FAC00475BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA52B78724BF9FAC00475BF9 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA4A653124CEDEFC00D9D16E /* blurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurView.swift; sourceTree = "<group>"; };
 		EA52B78024BF9FAB00475BF9 /* DatingAppMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingAppMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA52B78324BF9FAB00475BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA52B78524BF9FAB00475BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				EA52B78324BF9FAB00475BF9 /* AppDelegate.swift */,
+				EA4A653124CEDEFC00D9D16E /* blurView.swift */,
 				EA52B78524BF9FAB00475BF9 /* ContentView.swift */,
 				EA52B78724BF9FAC00475BF9 /* Assets.xcassets */,
 				EA86023824C6B6D600469F39 /* mockData.swift */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA86023924C6B6D600469F39 /* mockData.swift in Sources */,
+				EA4A653224CEDEFC00D9D16E /* blurView.swift in Sources */,
 				EA52B78624BF9FAB00475BF9 /* ContentView.swift in Sources */,
 				EA52B78424BF9FAB00475BF9 /* AppDelegate.swift in Sources */,
 			);

@@ -28,7 +28,11 @@ struct messageViewRecieve: View {
 
 struct messageViewHeader: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
+            Image("pic")
+                .resizable()
+                .frame(width: 50, height: 55)
+                .clipShape(Circle())
             Text("header")
         }
     }
@@ -36,9 +40,12 @@ struct messageViewHeader: View {
 
 
 struct messageViewFooter: View {
+ @State var message: String = ""
     var body: some View {
         HStack {
-            Text("Footer")
+            TextField("Date Me", text: $message).padding(.horizontal, 10)
+            .cornerRadius(20)
+
         }
     }
 }
@@ -47,15 +54,22 @@ struct messageViewFooter: View {
 struct messageView: View {
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                messageViewHeader().frame(width: geometry.size.width, height: 80).background(Color.gray.opacity(0.5).blur(radius: 0.5))
-                HStack {
-                    
-                    VStack {
-                        Text("Dolores")
+            VStack(spacing: 0) {
+                messageViewHeader().frame(width: geometry.size.width, height: 54.1, alignment: .topLeading).background(VisualEffectView()).edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    HStack(spacing: 0) {
+                        VStack(spacing:0) {
+                            ForEach(1 ... 55, id: \.self) { index in
+                                VStack{
+                                    Text("radasjdh askdhaskdhask djhaskdjsahdkasjhdask djhaskdh")
+                                }.background(Color.red).frame(width: 150, height: 150, alignment: .trailing)
+                            }
+                        }
                     }
-                }
-            }.frame(width: geometry.size.width, height: geometry.size.height)
+                }.background(Color.red)
+                messageViewFooter().frame(width: geometry.size.width, height: 54.1).background(VisualEffectView())
+            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color.yellow)
+            
         }
     }
 }
@@ -106,6 +120,10 @@ struct ContentView: View {
         }
    }
 }
+
+
+
+
 
 
 struct ContentView_Previews: PreviewProvider {
