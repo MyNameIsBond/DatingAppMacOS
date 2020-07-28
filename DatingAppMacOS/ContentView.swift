@@ -45,7 +45,6 @@ struct messageViewFooter: View {
         HStack {
             TextField("Date Me", text: $message).padding(.horizontal, 10)
             .cornerRadius(20)
-
         }
     }
 }
@@ -55,7 +54,7 @@ struct messageView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                messageViewHeader().frame(width: geometry.size.width, height: 54.1, alignment: .topLeading).background(VisualEffectView()).edgesIgnoringSafeArea(.all)
+                messageViewHeader().frame(width: geometry.size.width, height: 54.1).background(VisualEffectView())
                 ScrollView {
                     HStack(spacing: 0) {
                         VStack(spacing:0) {
@@ -67,9 +66,8 @@ struct messageView: View {
                         }
                     }
                 }.background(Color.red)
-                messageViewFooter().frame(width: geometry.size.width, height: 54.1).background(VisualEffectView())
-            }.frame(width: geometry.size.width, height: geometry.size.height).background(Color.yellow)
-            
+                messageViewFooter().frame(height: 54.1).background(VisualEffectView())
+            }.background(Color.yellow).edgesIgnoringSafeArea(.all)
         }
     }
 }
@@ -86,8 +84,8 @@ struct ContentView: View {
                         HStack {
                             
                     TextField("Search", text: self.$search)
-                        .background(Color.clear)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .background(VisualEffectView())
                         }.padding(.horizontal, 10).padding(.vertical, 5)
                 Divider().edgesIgnoringSafeArea(.all)
                         List {
